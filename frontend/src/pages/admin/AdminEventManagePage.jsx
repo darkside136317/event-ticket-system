@@ -31,7 +31,7 @@ export default function AdminEventManagePage() {
   };
 
   const handleDelete = async (id, title) => {
-    if (!window.confirm(`Bạn có chắc muốn hủy/xóa sự kiện "${title}"?`)) return;
+    if (!window.confirm(`Bạn có chắc muốn bỏ/xóa sự kiện "${title}"?`)) return;
     try {
       await axiosInstance.delete(`/admin/events/${id}`);
       showMsg('Đã hủy/xóa sự kiện thành công');
